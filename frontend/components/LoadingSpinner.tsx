@@ -24,7 +24,7 @@ export default function LoadingSpinner({ text }: Props) {
           fill="currentFill"
         />
       </svg>
-      <p className="text-2xl">{}</p>
+      <p className="text-2xl">{text}</p>
     </div>
   )
 }

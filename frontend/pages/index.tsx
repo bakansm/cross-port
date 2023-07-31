@@ -2,11 +2,14 @@ import { RootState, store } from '@/redux/store'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
 import { useState } from 'react'
+import LoadingSpinner from '@/components/LoadingSpinner'
 
 export default function Home() {
   const address = store.getState().connectWallet.address
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleGenCP = async () => {
+    setIsLoading(true)
     const config = {
       method: 'post',
       maxBodyLength: Infinity,
@@ -16,9 +19,11 @@ export default function Home() {
     axios
       .request(config)
       .then((response) => {
+        setIsLoading(false)
         alert(response.data.message)
       })
       .catch((error) => {
+        setIsLoading(false)
         alert(error)
       })
   }
@@ -29,12 +34,16 @@ export default function Home() {
   return (
     <div>
       {isConnected ? (
-        <button
+        isLoading ? (
+          <LoadingSpinner text='Generating'/>
+        ) : (
+          <button
           className="rounded-xl bg-black px-4 py-2 text-white"
           onClick={handleGenCP}
         >
           Generate crossport
         </button>
+        )
       ) : (
         <div className="space-y-4">
           <p className="text-center text-4xl text-black">
