@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import CommunityModal from './CommunityModal'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [showCommunity, setShowCommunity] = useState<boolean>(false)
@@ -10,7 +12,7 @@ export default function Navbar() {
     setShowCommunity(true)
   }
 
-  const handleCommunityMouseOut = () => {
+  const handleCommunityMouseOut = async () => {
     setShowCommunity(false)
   }
 
@@ -20,60 +22,32 @@ export default function Navbar() {
 
   return (
     <div>
-      <ul className="flex space-x-10 text-slate-500">
+      <ul className="flex text-slate-500">
         <li>
           <div
             className="relative h-full w-full"
             onMouseOver={handleCommunityMouseOver}
             onMouseOut={handleCommunityMouseOut}
           >
-            <button className="font-semibold hover:text-slate-700">
+            <button className="rounded-xl px-6 py-2 font-semibold hover:bg-slate-100">
               Community
             </button>
-            {showCommunity && (
-              <div className="absolute -left-3/4 top-full translate-x-1/2 overflow-hidden rounded-md bg-white shadow-lg">
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg  text-gray-700 hover:bg-gray-50"
-                >
-                  Discord
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-50"
-                >
-                  Facebook
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-50"
-                >
-                  Twitter
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-50"
-                >
-                  Telegram
-                </a>
-              </div>
-            )}
+            {showCommunity && <CommunityModal />}
           </div>
         </li>
         <li>
           <button
-            className="font-semibold hover:text-slate-700"
+            className="rounded-xl px-6 py-2 font-semibold hover:bg-slate-100"
             onClick={() => handleNavbarClick('/')}
           >
             Blog
           </button>
         </li>
         <li>
-          <button
-            className="font-semibold hover:text-slate-700"
-            onClick={() => handleNavbarClick('/faucet')}
-          >
-            Faucet
+          <button className="rounded-xl px-6 py-2 font-semibold hover:bg-slate-100">
+            <Link href="https://faucet-cross-port.vercel.app">
+              Faucet
+            </Link>
           </button>
         </li>
       </ul>

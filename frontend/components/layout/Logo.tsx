@@ -9,7 +9,7 @@ export default function Logo() {
 
   return (
     <button
-      className="text-2xl font-semibold text-black"
+      className="text-2xl font-semibold text-slate-600"
       onClick={() => handleLogoClicked('/')}
     >
       CrossPort

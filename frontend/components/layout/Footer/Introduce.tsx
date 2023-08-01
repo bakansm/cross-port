@@ -6,7 +6,7 @@ export default function Introduce() {
       <div className="text-start">
         <Logo />
       </div>
-      <p className="text-justify text-xl text-black">
+      <p className="text-justify text-xl">
         Lorem ipsum dolor sit amet. Ea recusandae voluptas aut harum
         alias sed mollitia rerum qui nostrum aspernatur et ratione
         exercitationem. 33 asperiores voluptatem qui ipsam

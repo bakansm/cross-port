@@ -5,9 +5,9 @@ import { PropsWithChildren } from 'react'
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <div className="w-full">
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex h-screen w-full items-center justify-center bg-white">
+      <main className="flex w-full flex-grow items-center justify-center bg-white">
         {children}
       </main>
       <Footer />

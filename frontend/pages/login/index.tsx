@@ -8,7 +8,7 @@ export default function LoginPage() {
 
   const { data: session, status } = useSession()
 
-  if (status === 'unauthenticated') {
+  if (status === 'unauthenticated') { 
     return <UnauthenticatedModal />
   } else if (status === 'loading') {
     return <LoadingSpinner text={'Loggin In'} />
