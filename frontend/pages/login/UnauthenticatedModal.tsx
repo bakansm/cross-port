@@ -28,7 +28,7 @@ export default function UnauthenticatedModal() {
 
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="flex animate-[popin_0.3s_ease-in-out] flex-col space-y-20 rounded-2xl bg-slate-50 p-10">
+      <div className="flex animate-[popin_0.7s_ease-in-out] flex-col space-y-20 rounded-2xl bg-slate-50 p-10">
         <div className="space-y-4">
           <p className="text-4xl font-semibold text-slate-700">
             Log in to Soundbound
@@ -40,15 +40,21 @@ export default function UnauthenticatedModal() {
         <div className="flex flex-col space-y-4">
           <button
             onClick={handleLoginGoogle}
-            className="w-full rounded-xl bg-slate-700 py-4 text-white hover:bg-slate-600"
+            className="w-full rounded-xl bg-slate-700 py-4 text-white hover:-translate-y-1 hover:bg-slate-600 hover:shadow-md hover:shadow-gray-500"
           >
             {googleIcon} Sign in with Google
           </button>
           <button
             onClick={handleLoginFacebook}
-            className="w-full rounded-xl bg-slate-700 py-4 text-white hover:bg-slate-600"
+            className="w-full rounded-xl bg-slate-700 py-4 text-white hover:-translate-y-1 hover:bg-slate-600 hover:shadow-md hover:shadow-gray-500"
           >
             {facebookIcon} Sign in with Facebook
+          </button>
+          <button
+            onClick={() => router.push('/')}
+            className="w-full rounded-xl py-4 text-slate-700 hover:scale-105"
+          >
+            Return Home
           </button>
         </div>
       </div>
