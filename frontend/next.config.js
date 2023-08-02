@@ -20,6 +20,7 @@ const nextConfig = {
     domains: [
       'platform-lookaside.fbsbx.com',
       'avatars.githubusercontent.com',
+      'ipfs.io',
     ],
   },
 }

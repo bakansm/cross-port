@@ -3,16 +3,16 @@ export default function Community() {
     <div className="space-y-4">
       <h2 className="font-semibold">Community</h2>
       <ul className="space-y-2 text-slate-400">
-        <li className="hover:text-slate-700">
+        <li className="hover:text-zinc-100">
           <a href="#">Facebook</a>
         </li>
-        <li className="hover:text-slate-700">
+        <li className="hover:text-zinc-100">
           <a href="#">Twitter</a>
         </li>
-        <li className="hover:text-slate-700">
+        <li className="hover:text-zinc-100">
           <a href="#">Discord</a>
         </li>
-        <li className="hover:text-slate-700">
+        <li className="hover:text-zinc-100">
           <a href="#">Telegram</a>
         </li>
       </ul>

@@ -11,22 +11,22 @@ export default function AvtModal() {
   }
 
   return (
-    <div className="w-58 absolute right-0 z-10 animate-[popin_0.1s_ease-in-out] overflow-hidden rounded-xl bg-white shadow-lg">
+    <div className="w-58 absolute right-0 z-10 animate-[popin_0.1s_ease-in-out] overflow-hidden rounded-xl bg-zinc-800 shadow-lg">
       <a
         href="#"
-        className="block px-4 py-2 text-lg  text-gray-700 hover:bg-gray-50"
+        className="block px-4 py-2 text-lg  text-white hover:bg-zinc-100 hover:bg-opacity-10"
       >
         Profile
       </a>
       <a
         href="#"
-        className="block px-4 py-2 text-lg text-gray-700 hover:bg-gray-50"
+        className="block px-4 py-2 text-lg  text-white hover:bg-zinc-100 hover:bg-opacity-10"
       >
         Setting
       </a>
       <button
         onClick={handleLogoutBtnClick}
-        className="block w-full whitespace-nowrap px-4 py-2 text-left  text-lg text-gray-700 hover:bg-red-400"
+        className="block whitespace-nowrap px-4 py-2  text-lg text-white hover:bg-zinc-100 hover:bg-opacity-10"
       >
         Sign out
       </button>

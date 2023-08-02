@@ -33,12 +33,12 @@ export default function AuthenticatedButton() {
   return (
     <div className="flex items-center space-x-4">
       {address ? (
-        <button className="w-40 truncate rounded-xl px-6 py-1 text-slate-500 outline outline-1 outline-slate-400 hover:bg-slate-700 hover:text-white hover:outline-none">
-          {address}
+        <button className="block w-fit rounded-xl bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text px-6 py-1 text-transparent text-white">
+          {address.slice(0, 15)}...
         </button>
       ) : (
         <button
-          className="w-40 rounded-xl px-6 py-1 text-slate-500 outline outline-1 outline-slate-400 hover:bg-slate-700 hover:text-white hover:outline-none"
+          className="w-fit rounded-xl bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 px-6 py-1 text-white hover:-translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-zinc-700"
           onClick={handleConnectWalletButtonClick}
         >
           Connect Wallet

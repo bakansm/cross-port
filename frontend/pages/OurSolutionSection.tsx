@@ -5,7 +5,7 @@ export default function OurSolutionSection() {
   const arrowUpIcon = (
     <FontAwesomeIcon
       icon={faArrowUp}
-      className="mr-4 animate-[slideFromBottom_1s_ease-in-out_infinite] text-slate-700"
+      className="mr-4 animate-[slideFromBottom_1s_ease-in-out_infinite] text-white"
     />
   )
 
@@ -19,13 +19,13 @@ export default function OurSolutionSection() {
   return (
     <div
       id="our-solution-section"
-      className="flex h-screen w-screen snap-start flex-col items-center justify-center "
+      className="flex h-screen w-full snap-start flex-col items-center justify-center bg-zinc-900 "
     >
       <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
-        <p className="text-center text-slate-600 mobile:text-2xl tablet:text-4xl">
+        <p className="bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-center text-transparent mobile:text-2xl tablet:text-4xl">
           Our Solution
         </p>
-        <p className="text-justify text-slate-600 mobile:text-base tablet:text-xl">
+        <p className="text-justify text-white mobile:text-base tablet:text-xl">
           Lorem ipsum dolor sit amet. Et galisum architecto ex dolores
           quisquam aut veritatis quaerat aut voluptatem incidunt sit
           nulla ratione aut quas delectus ex nostrum expedita. Quo
@@ -48,7 +48,7 @@ export default function OurSolutionSection() {
       </div>
       <div className="mb-6 w-fit animate-[slideFromBottom_1s_ease-in-out] hover:scale-105">
         <button
-          className="font-semibold text-slate-600 hover:underline"
+          className="bg-gradient-to-tr text-white hover:underline"
           onClick={() => clickToScrollToId('#main-section')}
         >
           {arrowUpIcon}Go to Top

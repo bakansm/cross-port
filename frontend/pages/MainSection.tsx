@@ -32,26 +32,29 @@ export default function MainSection() {
   }
 
   return (
-    <div id='main-section' className="flex h-screen w-screen snap-start items-center justify-center">
+    <div
+      id="main-section"
+      className="flex h-screen w-full snap-start items-center justify-center bg-zinc-900"
+    >
       <div className="space-y-8">
         <div className="animate-[slideFromTop_1s_ease-in-out]">
-          <p className="text-center text-4xl text-slate-600">
+          <p className="text-center text-4xl text-white">
             Welcome to
           </p>
-          <p className="text-center text-6xl font-bold text-slate-600">
+          <p className="bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-center text-6xl font-bold text-transparent">
             CrossPort
           </p>
         </div>
         <div className="w-fit animate-[slideFromBottom_1s_ease-in-out] space-x-8">
           <button
-            className="w-36 animate-[slideFromLeft_1s_ease-in-out] rounded-xl bg-slate-600 px-4 py-2 font-semibold text-white transition duration-300 ease-in-out hover:scale-110"
+            className="w-36 animate-[slideFromLeft_1s_ease-in-out] rounded-xl bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 px-4 py-2 font-semibold text-white transition duration-300 ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-zinc-700"
             onClick={handleGetStartedClick}
           >
             Get Started
           </button>
           <button
             onClick={() => clickToScrollToId('#who-we-are-section')}
-            className="transtion w-36 animate-[slideFromRight_1s_ease-in-out] rounded-xl bg-white px-4 py-2 font-semibold text-slate-600 outline outline-1 outline-slate-600 duration-300 ease-in-out hover:scale-110 hover:outline-dashed"
+            className="transtion w-36 animate-[slideFromRight_1s_ease-in-out] rounded-xl bg-white px-4 py-2 font-semibold text-zinc-900 outline outline-1 outline-slate-600 duration-300 ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-zinc-700"
           >
             Explore now
           </button>
