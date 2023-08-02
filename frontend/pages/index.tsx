@@ -7,7 +7,7 @@ import type { NextPageWithLayout } from './_app'
 
 const HomePage: NextPageWithLayout = () => {
   return (
-    <div className="snap-y snap-mandatory bg-red-400 mobile:px-2 laptop:px-0">
+    <div className="snap-y snap-mandatory overflow-x-hidden mobile:px-2 laptop:px-0">
       <MainSection />
       <WhoWeAreSection />
       <OurSolutionSection />
