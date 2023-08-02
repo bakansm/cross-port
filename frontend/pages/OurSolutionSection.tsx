@@ -19,7 +19,7 @@ export default function OurSolutionSection() {
   return (
     <div
       id="our-solution-section"
-      className="flex h-screen w-full snap-start flex-col items-center justify-center bg-zinc-900 "
+      className="px-4 flex h-screen w-full snap-start flex-col items-center justify-center bg-zinc-900 "
     >
       <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
         <p className="bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-center text-transparent mobile:text-2xl tablet:text-4xl">

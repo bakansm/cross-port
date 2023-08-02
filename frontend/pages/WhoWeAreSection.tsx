@@ -19,7 +19,7 @@ export default function WhoWeAreSection() {
   return (
     <div
       id="who-we-are-section"
-      className="flex h-screen w-full snap-start flex-col items-center justify-center bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500"
+      className="px-4 flex h-screen w-full snap-start flex-col items-center justify-center bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500"
     >
       <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
         <p className="text-center text-white mobile:text-2xl tablet:text-4xl">
