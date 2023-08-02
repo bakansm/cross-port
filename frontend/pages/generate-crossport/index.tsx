@@ -1,9 +1,11 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { ReactElement, useState } from 'react'
 import LoadingSpinner from '@/components/LoadingSpinner'
 import { store } from '@/redux/store'
+import type { NextPageWithLayout } from '../_app'
+import BaseLayout from '@/layouts/BaseLayout'
 
-export default function GenerateCrossport() {
+const GenerateCrossportPage: NextPageWithLayout = () => {
   const [isLoading, setIsLoading] = useState(false)
   const state = store.getState().connectWallet
 
@@ -44,3 +46,11 @@ export default function GenerateCrossport() {
     </>
   )
 }
+
+GenerateCrossportPage.getLayout = function getLayout(
+  page: ReactElement
+) {
+  return <BaseLayout>{page}</BaseLayout>
+}
+
+export default GenerateCrossportPage

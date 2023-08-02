@@ -1,18 +1,25 @@
 import { useSession } from 'next-auth/react'
 import UnauthenticatedModal from './UnauthenticatedModal'
 import LoadingSpinner from '@/components/LoadingSpinner'
-import { useRouter } from 'next/router'
+import BlankLayout from '@/layouts/BlankLayout'
+import { ReactElement } from 'react'
+import { NextPageWithLayout } from '../_app'
+import AuthenticatedModal from './AuthenticatedModal'
 
-export default function LoginPage() {
-  const router = useRouter()
+const LoginPage: NextPageWithLayout = () => {
+  const { status } = useSession()
 
-  const { data: session, status } = useSession()
-
-  if (status === 'unauthenticated') { 
+  if (status === 'unauthenticated') {
     return <UnauthenticatedModal />
   } else if (status === 'loading') {
     return <LoadingSpinner text={'Loggin In'} />
   } else {
-    router.push('/')
+    return <AuthenticatedModal />
   }
 }
+
+LoginPage.getLayout = function getLayout(page: ReactElement) {
+  return <BlankLayout>{page}</BlankLayout>
+}
+
+export default LoginPage
