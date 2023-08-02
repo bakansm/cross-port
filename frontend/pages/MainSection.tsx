@@ -32,7 +32,7 @@ export default function MainSection() {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="flex h-screen snap-start items-center justify-center">
       <div className="space-y-8">
         <div className="animate-[slideFromTop_1s_ease-in-out]">
           <p className="text-center text-4xl text-slate-600">

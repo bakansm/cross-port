@@ -5,12 +5,12 @@ import { PropsWithChildren } from 'react'
 
 export default function BaseLayout({ children }: PropsWithChildren) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <>
       <Header />
-      <main className="flex w-full flex-grow items-center justify-center bg-white">
+      <main className="flex w-screen items-start justify-center">
         {children}
       </main>
       <Footer />
-    </div>
+    </>
   )
 }

@@ -19,13 +19,13 @@ export default function WhoWeAreSection() {
   return (
     <div
       id="who-we-are-section"
-      className="relative flex h-screen flex-col items-center justify-center"
+      className="flex h-screen snap-start flex-col items-center justify-center"
     >
-      <div className="w-1/2 animate-[slideFromTop_1s_ease-in-out] space-y-8">
-        <p className="text-center text-4xl text-slate-600">
+      <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
+        <p className="text-center text-slate-600 mobile:text-2xl tablet:text-4xl">
           Who are we?
         </p>
-        <p className="text-justify text-xl text-slate-600">
+        <p className="text-justify text-slate-600 mobile:text-base tablet:text-xl">
           Sit distinctio dolor qui necessitatibus saepe rem ipsa
           aliquam quo libero rerum. In sint dolorem eos laborum
           excepturi non cupiditate dolorem et ipsum atque non
@@ -47,7 +47,7 @@ export default function WhoWeAreSection() {
           Et rerum quos qui numquam assumenda rem similique autem.
         </p>
       </div>
-      <div className=" absolute bottom-0 mb-6 w-fit animate-[slideFromBottom_1s_ease-in-out] hover:scale-105">
+      <div className="mb-6 w-fit animate-[slideFromBottom_1s_ease-in-out] hover:scale-105">
         <button
           className="font-semibold text-slate-600 hover:underline"
           onClick={() => clickToScrollToId('#our-solution-section')}

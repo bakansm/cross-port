@@ -21,7 +21,7 @@ export default function Navbar() {
   }
 
   return (
-    <div>
+    <div className="mobile:hidden tablet:block">
       <ul className="flex text-slate-500">
         <li>
           <div

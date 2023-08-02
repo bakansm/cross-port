@@ -13,13 +13,13 @@ export default function OurSolutionSection() {
   return (
     <div
       id="our-solution-section"
-      className="relative flex h-screen flex-col items-center justify-center"
+      className="flex h-screen snap-start flex-col items-center justify-center "
     >
-      <div className="w-1/2 animate-[slideFromTop_1s_ease-in-out] space-y-8">
-        <p className="text-center text-4xl text-slate-600">
+      <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
+        <p className="text-center text-slate-600 mobile:text-2xl tablet:text-4xl">
           Our Solution
         </p>
-        <p className="text-justify text-xl text-slate-600">
+        <p className="text-justify text-slate-600 mobile:text-base tablet:text-xl">
           Lorem ipsum dolor sit amet. Et galisum architecto ex dolores
           quisquam aut veritatis quaerat aut voluptatem incidunt sit
           nulla ratione aut quas delectus ex nostrum expedita. Quo
@@ -40,7 +40,7 @@ export default function OurSolutionSection() {
           libero.
         </p>
       </div>
-      <div className="absolute bottom-0 mb-6 w-fit hover:scale-105">
+      <div className="mb-6 w-fit animate-[slideFromBottom_1s_ease-in-out] hover:scale-105">
         <button
           className="font-semibold text-slate-600 hover:underline"
           onClick={() =>

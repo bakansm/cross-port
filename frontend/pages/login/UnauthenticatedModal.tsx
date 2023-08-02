@@ -16,19 +16,9 @@ export default function UnauthenticatedModal() {
 
   const router = useRouter()
 
-  const handleLoginFacebook = async () => {
-    await signIn('google')
-    router.push('/')
-  }
-
-  const handleLoginGoogle = async () => {
-    await signIn('facebook')
-    router.push('/')
-  }
-
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="flex animate-[popin_0.7s_ease-in-out] flex-col space-y-20 rounded-2xl bg-slate-50 p-10">
+      <div className="flex animate-[popin_0.7s_ease-in-out] flex-col space-y-20 rounded-2xl p-10 mobile:bg-none tablet:bg-slate-50">
         <div className="space-y-4">
           <p className="text-4xl font-semibold text-slate-700">
             Log in to Soundbound
@@ -39,13 +29,13 @@ export default function UnauthenticatedModal() {
         </div>
         <div className="flex flex-col space-y-4">
           <button
-            onClick={handleLoginGoogle}
+            onClick={() => signIn('google')}
             className="w-full rounded-xl bg-slate-700 py-4 text-white hover:-translate-y-1 hover:bg-slate-600 hover:shadow-md hover:shadow-gray-500"
           >
             {googleIcon} Sign in with Google
           </button>
           <button
-            onClick={handleLoginFacebook}
+            onClick={() => signIn('facebook')}
             className="w-full rounded-xl bg-slate-700 py-4 text-white hover:-translate-y-1 hover:bg-slate-600 hover:shadow-md hover:shadow-gray-500"
           >
             {facebookIcon} Sign in with Facebook

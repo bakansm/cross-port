@@ -6,12 +6,12 @@ import Support from './Support'
 
 export default function Footer() {
   return (
-    <div className="relative flex w-full items-start justify-center bg-slate-50 py-16 text-slate-600">
-      <div className="flex w-3/4 flex-wrap items-start justify-between sm:space-y-10 lg:space-x-40 lg:space-y-0">
-        <div className="flex w-full sm:flex-grow lg:flex-1">
+    <div className="flex w-full items-center justify-center bg-slate-50 py-16 text-slate-600">
+      <div className="flex flex-wrap items-start justify-between mobile:w-full mobile:gap-10 mobile:px-4 laptop:w-3/4 laptop:gap-40 laptop:px-0">
+        <div className="mobile:flex-grow laptop:flex-1">
           <Introduce />
         </div>
-        <div className="flex w-full items-start justify-between sm:flex-grow lg:flex-1">
+        <div className="flex items-start justify-between mobile:flex-grow tablet:text-xl laptop:flex-1">
           <CrossPort />
           <About />
           <Community />

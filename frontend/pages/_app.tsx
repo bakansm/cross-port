@@ -1,6 +1,5 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import BaseLayout from '../layouts/BaseLayout'
 import { SessionProvider } from 'next-auth/react'
 import { Provider } from 'react-redux'
 import { store } from '@/redux/store'
@@ -23,11 +22,9 @@ export default function App({
 
   return (
     <SessionProvider session={pageProps.session}>
-      {getLayout(
-        <Provider store={store}>
-          <Component {...pageProps} />
-        </Provider>
-      )}
+      <Provider store={store}>
+        {getLayout(<Component {...pageProps} />)}
+      </Provider>
     </SessionProvider>
   )
 }
