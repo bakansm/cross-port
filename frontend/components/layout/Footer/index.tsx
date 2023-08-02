@@ -6,7 +6,7 @@ import Support from './Support'
 
 export default function Footer() {
   return (
-    <div className="flex w-full items-center justify-center bg-slate-50 py-16 text-slate-600">
+    <div className="flex w-full snap-end items-center justify-center bg-slate-50 py-16 text-slate-600">
       <div className="flex flex-wrap items-start justify-between mobile:w-full mobile:gap-10 mobile:px-4 laptop:w-3/4 laptop:gap-40 laptop:px-0">
         <div className="mobile:flex-grow laptop:flex-1">
           <Introduce />

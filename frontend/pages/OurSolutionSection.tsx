@@ -1,5 +1,4 @@
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
-import { animateScroll as scroll } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function OurSolutionSection() {
@@ -10,10 +9,17 @@ export default function OurSolutionSection() {
     />
   )
 
+  const clickToScrollToId = (sectionId: string) => {
+    const element = document.querySelector(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <div
       id="our-solution-section"
-      className="flex h-screen snap-start flex-col items-center justify-center "
+      className="flex h-screen w-screen snap-start flex-col items-center justify-center "
     >
       <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
         <p className="text-center text-slate-600 mobile:text-2xl tablet:text-4xl">
@@ -43,12 +49,7 @@ export default function OurSolutionSection() {
       <div className="mb-6 w-fit animate-[slideFromBottom_1s_ease-in-out] hover:scale-105">
         <button
           className="font-semibold text-slate-600 hover:underline"
-          onClick={() =>
-            scroll.scrollToTop({
-              duration: 1000,
-              smooth: 'easeInOutQuart',
-            })
-          }
+          onClick={() => clickToScrollToId('#main-section')}
         >
           {arrowUpIcon}Go to Top
         </button>

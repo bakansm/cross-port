@@ -7,10 +7,10 @@ export default function BaseLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Header />
-      <main className="flex w-screen items-start justify-center">
+      <main className="h-screen w-screen snap-y snap-mandatory overflow-x-hidden scroll-smooth mobile:px-2 laptop:px-0">
         {children}
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }

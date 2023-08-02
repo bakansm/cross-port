@@ -19,7 +19,7 @@ export default function WhoWeAreSection() {
   return (
     <div
       id="who-we-are-section"
-      className="flex h-screen snap-start flex-col items-center justify-center"
+      className="flex h-screen w-screen snap-start flex-col items-center justify-center"
     >
       <div className="flex flex-grow animate-[slideFromTop_1s_ease-in-out] flex-col items-center justify-center space-y-8 mobile:w-full tablet:w-1/2">
         <p className="text-center text-slate-600 mobile:text-2xl tablet:text-4xl">
