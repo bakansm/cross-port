@@ -17,3 +17,5 @@ export const connectMetamask = async () => {
   const address = await signer.getAddress()
   return address
 }
+
+

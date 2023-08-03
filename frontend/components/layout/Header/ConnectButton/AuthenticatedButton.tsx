@@ -33,7 +33,7 @@ export default function AuthenticatedButton() {
   return (
     <div className="flex items-center space-x-4">
       {address ? (
-        <button className="block w-fit rounded-xl bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text px-6 py-1 text-transparent text-white">
+        <button className="block w-fit rounded-xl bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text px-6 py-1 text-transparent">
           {address.slice(0, 15)}...
         </button>
       ) : (

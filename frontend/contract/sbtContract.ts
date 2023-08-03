@@ -14,3 +14,12 @@ const contract = new ethers.Contract(
 )
 
 // export function here
+
+export const checkOwnerSbt = async (address: string) => {
+  try {
+    const checkResult = await contract.checkOwnerSbt(address)
+    return checkResult
+  } catch (error) {
+    return error
+  }
+}

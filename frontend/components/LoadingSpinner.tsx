@@ -6,11 +6,11 @@ export default function LoadingSpinner({ text }: Props) {
   return (
     <div
       role="status"
-      className="flex flex-col items-center justify-center space-y-4"
+      className="flex h-screen w-screen flex-col items-center justify-center space-y-4 bg-zinc-900"
     >
       <svg
         aria-hidden="true"
-        className="h-32 w-32 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
+        className="h-32 w-32 animate-spin fill-pink-500 text-gray-200 dark:text-gray-600"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export default function LoadingSpinner({ text }: Props) {
           fill="currentFill"
         />
       </svg>
-      <p className="text-2xl">{text}</p>
+      <p className="text-2xl text-white">{text}</p>
     </div>
   )
 }
