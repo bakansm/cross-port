@@ -25,7 +25,7 @@ export default function UnauthenticatedModal() {
       <div className="flex animate-[popin_0.7s_ease-in-out] flex-col space-y-20 rounded-2xl from-purple-500 via-pink-500 to-blue-500 p-10 mobile:bg-none tablet:bg-gradient-to-tr">
         <div className="space-y-4">
           <p className="text-4xl font-semibold text-white">
-            Log in to CrossPort
+            Log in to ISoulBondT
           </p>
           <p className="text-xl font-semibold text-zinc-100">
             Welcome back!

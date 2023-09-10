@@ -22,7 +22,7 @@ const GenerateCrossportPage: NextPageWithLayout = () => {
             const config = {
               method: 'post',
               maxBodyLength: Infinity,
-              url: `13.215.186.253:7500/nft/generate/${state.address}`,
+              url: `https://fe4d-2406-da18-19d-6400-fc4-24e0-d6d4-4cc3.ngrok-free.app/nft/generate/${state.address}`,
             }
 
             axios
@@ -36,7 +36,7 @@ const GenerateCrossportPage: NextPageWithLayout = () => {
                 alert(error)
               })
           } else {
-            alert('Cannot generate, CrossPort is existed')
+            alert('Cannot generate, ISoulBondT is existed')
           }
         })
         .catch((error) => alert(error))
@@ -58,7 +58,7 @@ const GenerateCrossportPage: NextPageWithLayout = () => {
               className="w-fit animate-[slideFromLeft_1s_ease-in-out] rounded-xl bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 px-4 py-2 font-semibold text-white transition duration-300 ease-in-out hover:-translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-zinc-700"
               onClick={handleGenCP}
             >
-              Generate crossport
+              Generate ISoulBondT
             </button>
           </div>
           {showNFTConfirmation && (
