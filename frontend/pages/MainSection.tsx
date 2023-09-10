@@ -42,7 +42,7 @@ export default function MainSection() {
             Welcome to
           </p>
           <p className="bg-gradient-to-tr from-purple-500 via-pink-500 to-blue-500 bg-clip-text text-center text-6xl font-bold text-transparent">
-            CrossPort
+          ISoulbondT
           </p>
         </div>
         <div className="w-fit animate-[slideFromBottom_1s_ease-in-out] space-x-8">

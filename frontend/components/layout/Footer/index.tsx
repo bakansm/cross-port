@@ -1,6 +1,6 @@
 import About from './About'
 import Community from './Community'
-import CrossPort from './CrossPort'
+import ISoulbondT from './ISoulbondT'
 import Introduce from './Introduce'
 import Support from './Support'
 
@@ -12,7 +12,7 @@ export default function Footer() {
           <Introduce />
         </div>
         <div className="flex items-start justify-between mobile:flex-grow tablet:text-xl laptop:flex-1">
-          <CrossPort />
+          <ISoulbondT />
           <About />
           <Community />
           <Support />
