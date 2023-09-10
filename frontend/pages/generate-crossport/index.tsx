@@ -22,7 +22,7 @@ const GenerateCrossportPage: NextPageWithLayout = () => {
             const config = {
               method: 'post',
               maxBodyLength: Infinity,
-              url: `https://fe4d-2406-da18-19d-6400-fc4-24e0-d6d4-4cc3.ngrok-free.app/nft/generate/${state.address}`,
+              url: `https://dc9e-2406-da18-19d-6400-fc4-24e0-d6d4-4cc3.ngrok-free.app/nft/generate/${state.address}`,
             }
 
             axios
