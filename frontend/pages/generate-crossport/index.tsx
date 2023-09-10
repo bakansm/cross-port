@@ -22,7 +22,7 @@ const GenerateCrossportPage: NextPageWithLayout = () => {
             const config = {
               method: 'post',
               maxBodyLength: Infinity,
-              url: `http://34.232.46.225:9001/nft/generate/${state.address}`,
+              url: `13.215.186.253:7500/nft/generate/${state.address}`,
             }
 
             axios
